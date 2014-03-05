@@ -86,7 +86,8 @@
             position:relative;
             top:1px;
         }</style>
-        <script type="text/javascript" src="js/SocialSharing.js"></script>        
+        <script type="text/javascript" src="js/SocialSharing.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js" />        
     </head>
     <body>
         <div class="app">
@@ -98,6 +99,7 @@
 
 
             <p id="message" >La quote es...</p>
+
             <button id="twitter-share">COMPARTIR EN TWITTER</button>
 
         </div>
@@ -108,8 +110,11 @@
             app.initialize();
             </script>
         <script type="text/javascript">
+            app.initialize();
+
             $(document).ready(function(){
-                //Javascript: document.getElementById('message').innerHTML
+                //Jquery
+                var content = $("p#message").text();
                 $("#twitter-share").on('click', function(){
                     window.plugins.socialsharing.share(content);
                 });
