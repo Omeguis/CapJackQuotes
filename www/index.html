@@ -94,7 +94,7 @@
             <h1>Press Stars</h1>
 
             <button type="button" id="btnSearch" onclick="GetValue();">QUOTEEE!</button>
-            <button onclick="window.plugins.socialsharing.share(document.getElementById('message').innerHTML)">message only</button>
+            <button onclick="window.plugins.socialsharing.shareViaTwitter(document.getElementById('message').innerHTML)">message only</button>
             
 
             <p id="message" >La quote es...</p>
@@ -110,7 +110,7 @@
         var text = document.getElementById('message').innerHTML;
         console.log(text);
         //lo metes donde quieras
-        alert(text);
+        //alert(text);
     </script>        
         <script type="text/javascript">
             app.initialize();
